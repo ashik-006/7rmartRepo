@@ -1,19 +1,26 @@
 package testscript;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import pages.Adminpage;
+import pages.AdminPage;
+import utilities.Exel_utilities;
 
-public class Admintest extends Base
+
+public class AdminTest extends Base
 {
 	@Test
-public void verifyTheUserIsAbleToUpdate()
+public void verifyTheUserIsAbleToUpdate() throws IOException
 {
-	String usernamevalue="admin";
-	String passwordvalue="admin";
+	//String usernamevalue="admin";
+	//String passwordvalue="admin";
+		
+		String usernamevalue=Exel_utilities.getStringData(1, 0, "Loginpage");
+        String passwordvalue=Exel_utilities.getStringData(1, 1, "Loginpage");
 	
-	Adminpage adminpage=new Adminpage(driver);
+	AdminPage adminpage=new AdminPage(driver);
 	adminpage.enterUserNameOnUserField(usernamevalue);
 	adminpage.enterPasswordOnPasswordField(passwordvalue);
 	adminpage.clickOnSignInButton();

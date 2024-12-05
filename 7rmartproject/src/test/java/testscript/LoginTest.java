@@ -3,21 +3,23 @@ package testscript;
 import java.io.IOException;
 
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import pages.Loginpage;
+import pages.LoginPage;
+
 import utilities.Exel_utilities;
 
-public class Logintest extends Base
+public class LoginTest extends Base
 {
-	@Test
-	public void VerifyTheUserIsAbleToLogInUsingValidCredentials() throws IOException
+	@Test(retryAnalyzer=retry.Retry.class,groups= {"regression"},description="logintest cases1")
+	public void verifyTheUserIsAbleToLogInUsingValidCredentials() throws IOException
 	{
 		//String usernamevalue="admin";
 		//String passwordvalue="admin";
 		String usernamevalue=Exel_utilities.getStringData(1, 0, "Loginpage");
         String passwordvalue=Exel_utilities.getStringData(1, 1, "Loginpage");
-		Loginpage loginpage=new Loginpage(driver);
+		LoginPage loginpage=new LoginPage(driver);
 		loginpage.enterUserNameOnUserField(usernamevalue);
 		loginpage.enterPasswordOnPasswordField(passwordvalue);
 		loginpage.clickOnSignInButton();
@@ -25,16 +27,14 @@ public class Logintest extends Base
 		Assert.assertTrue(homepagedisplayed,"Home page not loaded when user entered valid credentials");
 		
 	}
-	@Test
-	public void VerifyTheUserIsAbleToLogInUsingInvalidPassword() throws IOException
+	@Test(retryAnalyzer=retry.Retry.class,groups= {"regression"},description="verifying user is able to login using invalid password")
+	public void verifyTheUserIsAbleToLogInUsingInvalidPassword() throws IOException
 	{
 		//String usernamevalue="admin";
 		//String passwordvalue="admi";
 		String usernamevalue=Exel_utilities.getStringData(2, 0, "Loginpage");
-        String passwordvalue=Exel_utilities.getStringData(2, 2, "Loginpage");
-		
-		
-		Loginpage loginpage=new Loginpage(driver);
+        String passwordvalue=Exel_utilities.getStringData(2, 1, "Loginpage");
+		LoginPage loginpage=new LoginPage(driver);
 		loginpage.enterUserNameOnUserField(usernamevalue);
 		loginpage.enterPasswordOnPasswordField(passwordvalue);
 		loginpage.clickOnSignInButton();
@@ -43,15 +43,15 @@ public class Logintest extends Base
 	    
 	}
 	@Test
-	public void VerifyTheUserIsAbleToLogInUsingInvalidUsername() throws IOException
+	public void verifyTheUserIsAbleToLogInUsingInvalidUsername() throws IOException
 	{
 		//String usernamevalue="admi";
 		//String passwordvalue="admin";
 		
 		String usernamevalue=Exel_utilities.getStringData(3, 0, "Loginpage");
-        String passwordvalue=Exel_utilities.getStringData(3, 3, "Loginpage");
+        String passwordvalue=Exel_utilities.getStringData(3, 1, "Loginpage");
 		
-		Loginpage loginpage=new Loginpage(driver);
+		LoginPage loginpage=new LoginPage(driver);
 		loginpage.enterUserNameOnUserField(usernamevalue);
 		loginpage.enterPasswordOnPasswordField(passwordvalue);
 		loginpage.clickOnSignInButton();
@@ -60,15 +60,15 @@ public class Logintest extends Base
 	}
 	
 	@Test
-	public void VerifyTheUserIsAbleToLogInUsingInvalidUsernameAndPassword() throws IOException
+	public void verifyTheUserIsAbleToLogInUsingInvalidUsernameAndPassword() throws IOException
 	{
 		//String usernamevalue="admi";
 		//String passwordvalue="admi";
 		String usernamevalue=Exel_utilities.getStringData(4, 0, "Loginpage");
-        String passwordvalue=Exel_utilities.getStringData(4, 4, "Loginpage");
+        String passwordvalue=Exel_utilities.getStringData(4, 1, "Loginpage");
 		
 		
-		Loginpage loginpage=new Loginpage(driver);
+        LoginPage loginpage=new LoginPage(driver);
 		loginpage.enterUserNameOnUserField(usernamevalue);
 		loginpage.enterPasswordOnPasswordField(passwordvalue);
 		loginpage.clickOnSignInButton();
@@ -77,5 +77,10 @@ public class Logintest extends Base
 		
 		
 	}
+	@DataProvider(name = "LoginProvider")
+	public Object[][] getDataFromTestData() throws IOException 
+	{
+		return new Object[][] { { Exel_utilities.getStringData(1, 6, "LoginPage"), Exel_utilities.getStringData(1, 7, "LoginPage") }};
+}
 	
 }
