@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import constants.Constants;
 import utilities.FileUploadUtilities;
 import utilities.PageUtility;
-import utilities.WaitUtilities;
+
 
 public class AdminManageProductsPage
 {

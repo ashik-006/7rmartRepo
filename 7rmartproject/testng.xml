@@ -7,9 +7,9 @@
 	</listeners>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="testscript.LoginTest">
+      <class name="testscript.HomeTest">
 		<methods>
-			<include name="verifyTheUserIsAbleToLogInUsingInvalidUsernameAndPassword"></include>
+			<include name="verifyUserIsAbleToLogout"></include>
 		</methods>
       </class>
     </classes>

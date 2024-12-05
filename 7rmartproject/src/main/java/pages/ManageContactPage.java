@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utilities.PageUtility;
-import utilities.WaitUtilities;
+
 
 public class ManageContactPage 
 {
