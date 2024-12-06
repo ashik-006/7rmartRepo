@@ -17,9 +17,9 @@
   <test name="EdgeTest">
 	<parameter name="browser" value="Edge"></parameter>
     <classes>
-      <class name="testscript.LoginTest">
+      <class name="testscript.HomeTest">
       <methods>
-      <include name="VerifyTheUserIsAbleToLogInUsingValidCredentials"> </include>
+      <include name="verifyUserIsAbleToLogout"> </include>
        </methods>
       </class>
     </classes>

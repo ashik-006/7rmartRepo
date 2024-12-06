@@ -7,9 +7,9 @@
   <test name="ChromeTest">
 	<parameter name="browser" value="Chrome"></parameter>
     <classes>
-      <class name="testscript.LoginTest">
+      <class name="testscript.HomeTest">
       <methods>
-      <include name="VerifyTheUserIsAbleToLogInUsingValidCredentials"> </include>
+      <include name="verifyUserIsAbleToLogout"> </include>
        </methods>
       </class> 
     </classes>
@@ -17,9 +17,9 @@
   <test name="EdgeTest">
 	<parameter name="browser" value="Edge"></parameter>
     <classes>
-      <class name="testscript.LoginTest">
+      <class name="testscript.HomeTest">
       <methods>
-      <include name="VerifyTheUserIsAbleToLogInUsingValidCredentials"> </include>
+      <include name="verifyUserIsAbleToLogout"> </include>
        </methods>
       </class> 
     </classes>
@@ -27,9 +27,9 @@
   <test name="FirefoxTest">
 	<parameter name="browser" value="Firefox"></parameter>
     <classes>
-      <class name="testscript.LoginTest">
+      <class name="testscript.HomeTest">
       <methods>
-      <include name="VerifyTheUserIsAbleToLogInUsingValidCredentials"> </include>
+      <include name="verifyUserIsAbleToLogout"> </include>
        </methods>
       </class> 
     </classes>

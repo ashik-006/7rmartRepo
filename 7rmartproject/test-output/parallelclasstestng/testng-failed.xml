@@ -14,13 +14,6 @@
           <include name="verifyTheUserIsAbleToUpdate"/>
         </methods>
       </class> <!-- testscript.AdminTest -->
-      <class name="testscript.LoginTest">
-        <methods>
-          <include name="initializeBrowser"/>
-          <include name="driverQuitAndClose"/>
-          <include name="VerifyTheUserIsAbleToLogInUsingValidCredentials"/>
-        </methods>
-      </class> <!-- testscript.LoginTest -->
     </classes>
   </test> <!-- test(failed) -->
 </suite> <!-- Failed suite [parallelclasstestng] -->

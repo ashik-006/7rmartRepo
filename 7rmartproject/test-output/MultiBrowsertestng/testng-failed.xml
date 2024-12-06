@@ -4,40 +4,16 @@
   <listeners>
     <listener class-name="generatereport.Listeners"/>
   </listeners>
-  <test thread-count="3" parallel="tests" name="ChromeTest(failed)">
-    <parameter name="browser" value="Chrome"/>
-    <classes>
-      <class name="testscript.LoginTest">
-        <methods>
-          <include name="initializeBrowser"/>
-          <include name="driverQuitAndClose"/>
-          <include name="VerifyTheUserIsAbleToLogInUsingValidCredentials"/>
-        </methods>
-      </class> <!-- testscript.LoginTest -->
-    </classes>
-  </test> <!-- ChromeTest(failed) -->
-  <test thread-count="3" parallel="tests" name="EdgeTest(failed)">
-    <parameter name="browser" value="Edge"/>
-    <classes>
-      <class name="testscript.LoginTest">
-        <methods>
-          <include name="initializeBrowser"/>
-          <include name="driverQuitAndClose"/>
-          <include name="VerifyTheUserIsAbleToLogInUsingValidCredentials"/>
-        </methods>
-      </class> <!-- testscript.LoginTest -->
-    </classes>
-  </test> <!-- EdgeTest(failed) -->
   <test thread-count="3" parallel="tests" name="FirefoxTest(failed)">
     <parameter name="browser" value="Firefox"/>
     <classes>
-      <class name="testscript.LoginTest">
+      <class name="testscript.HomeTest">
         <methods>
           <include name="initializeBrowser"/>
+          <include name="verifyUserIsAbleToLogout"/>
           <include name="driverQuitAndClose"/>
-          <include name="VerifyTheUserIsAbleToLogInUsingValidCredentials"/>
         </methods>
-      </class> <!-- testscript.LoginTest -->
+      </class> <!-- testscript.HomeTest -->
     </classes>
   </test> <!-- FirefoxTest(failed) -->
 </suite> <!-- Failed suite [MultiBrowsertestng] -->
