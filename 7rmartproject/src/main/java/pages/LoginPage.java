@@ -22,23 +22,21 @@ WebDriver driver;
 	@FindBy(xpath="//button[@type='submit']")private WebElement signin;
 	@FindBy(xpath="//p[text()='Dashboard']")private WebElement dashboardvalue;
 	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']")private WebElement alerts;
-	public void enterUserNameOnUserField(String usernamevaluepassing)
+	public LoginPage enterUserNameOnUserField(String usernamevaluepassing)
 	{
-		//PageUtility page=new PageUtility();
-		//page.javaSriptClick(driver, usernameField);
 		usernameField.sendKeys(usernamevaluepassing);
+		return this;
 	}
-	public void enterPasswordOnPasswordField(String pwdpassing)
+	public LoginPage enterPasswordOnPasswordField(String pwdpassing)
 	{
-		//PageUtility page=new PageUtility();
-		//page.javaSriptClick(driver, pwd);
+		
 		pwd.sendKeys(pwdpassing);
+		return this;
 	}
-	public void clickOnSignInButton()
+	public HomePage clickOnSignInButton()
 	{
-		//PageUtility page=new PageUtility();
-		//page.javaSriptClick(driver, signin);
 		signin.click();
+		return new HomePage(driver);
 	}
 	public boolean isHomePageDisplayed()
 	{

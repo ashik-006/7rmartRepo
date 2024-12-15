@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import utilities.PageUtility;
+
 
 
 public class ManageContactPage 
@@ -19,7 +19,7 @@ public class ManageContactPage
 	@FindBy(xpath="//input[@type='text']")private WebElement usernameField;
 	@FindBy(xpath="//input[@type='password']")private WebElement pwd;
 	@FindBy(xpath="//button[@type='submit']")private WebElement signin;
-	@FindBy(xpath="//a[@class='small-box-footer' and @href='https://groceryapp.uniqassosiates.com/admin/list-contact']")private WebElement moreinfo ;
+	//@FindBy(xpath="//a[@class='small-box-footer' and @href='https://groceryapp.uniqassosiates.com/admin/list-contact']")private WebElement moreinfo ;
 	@FindBy(xpath="//i[@class='fas fa-edit']")private WebElement action;
 	@FindBy(xpath="//input[@id='phone']")private WebElement phone;
 	@FindBy(xpath="//input[@id='email']")private WebElement email ;
@@ -30,59 +30,45 @@ public class ManageContactPage
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")private WebElement alert;
 	
 	
-	
-	public void enterUserNameOnUserField(String usernamevaluepassing)
-	{
-		usernameField.sendKeys(usernamevaluepassing);
-	}
-	public void enterPasswordOnPasswordField(String pwdpassing)
-	{
-		pwd.sendKeys(pwdpassing);
-	}
-	public void clickOnSignInButton()
-	{
-		signin.click();
-	}
-	public void clickOnMoreInfo()
-	{
-		//moreinfo.click();
-		//WaitUtilities object= new WaitUtilities();
-		//object.waitForElement(driver, moreinfo);
-		PageUtility obj=new PageUtility();
-		obj.javaSriptClick(driver, moreinfo);
-	}
-	public void clickOnAction()
+	public ManageContactPage clickOnAction()
 	{
 		action.click();
+		return this;
 	}
-	public void enterPhoneNo(String phonenopassing)
+	public ManageContactPage enterPhoneNo(String phonenopassing)
 	{
 		phone.clear();
 		phone.sendKeys(phonenopassing);
+		return this;
 	}
-	public void enterEmail(String emailpassing)
+	public ManageContactPage enterEmail(String emailpassing)
 	{
 		email.clear();
 		email.sendKeys(emailpassing);
+		return this;
 	}
-	public void enterAddress(String addresspassing)
+	public ManageContactPage enterAddress(String addresspassing)
 	{
 		address.clear();
 		address.sendKeys(addresspassing);
+		return this;
 	}
-	public void enterTime(String timepassing)
+	public ManageContactPage enterTime(String timepassing)
 	{
 		time.clear();
 		time.sendKeys(timepassing);
+		return this;
 	}
-	public void enterLimit(String limitpassing)
+	public ManageContactPage enterLimit(String limitpassing)
 	{
 		limit.clear();
 		limit.sendKeys(limitpassing);
+		return this;
 	}
-	public void clickOnUpdate()
+	public ManageContactPage clickOnUpdate()
 	{
 		update.click();
+		return this;
 	}
 	public boolean isAlertDisplayed()
 	{

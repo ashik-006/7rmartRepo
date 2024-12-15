@@ -19,51 +19,42 @@ WebDriver driver;
 	@FindBy(xpath="//input[@type='text']")private WebElement usernameField;
 	@FindBy(xpath="//input[@type='password']")private WebElement pwd;
 	@FindBy(xpath="//button[@type='submit']")private WebElement signin;
-	@FindBy(xpath="//a[@class='small-box-footer']")private WebElement adminusers;
+	//@FindBy(xpath="//a[@class='small-box-footer']")private WebElement adminusers;
 	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/user/edit?edit=10985&page_ad=1']")private WebElement editoption;
 	@FindBy(xpath="//input[@id='username']")private WebElement username;
 	@FindBy(xpath="//input[@id='password']")private WebElement passsword;
 	@FindBy(xpath="//select[@id='user_type']")private WebElement usertype;
 	@FindBy(xpath="//button[@name='Update']")private WebElement update;
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")private WebElement alertdisplayed;
-	public void enterUserNameOnUserField(String usernamevaluepassing)
-	{
-		usernameField.sendKeys(usernamevaluepassing);
-	}
-	public void enterPasswordOnPasswordField(String pwdpassing)
-	{
-		pwd.sendKeys(pwdpassing);
-	}
-	public void clickOnSignInButton()
-	{
-		signin.click();
-	}
-	public void clickOnMoreInfo()
-	{
-		adminusers.click();
-	}
-	public void clickOnEdit()
+	
+	
+	public AdminPage clickOnEdit()
 	{
 		editoption.click();
+		return this;
 	}
-	public void enterUserName()
+	public AdminPage enterUserName()
 	{
 		username.clear();
 		username.sendKeys("Ashi");
+		return this;
 	}
-	public void enterPassword()
+	public AdminPage enterPassword()
 	{
 		passsword.clear();
 		passsword.sendKeys("123456789");
+		return this;
 	}
-	public void enterUserType()
+	public AdminPage enterUserType()
 	{
 		Select selectingusertype = new Select(usertype);
 		selectingusertype.selectByIndex(3);	
+		return this;
 	}
-	public void clickOnUpdate()
+	public AdminPage clickOnUpdate()
 	{
 		update.click();
+		return this;
 	}
 	public boolean isAlertDispalyed()
 	{

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-06T21:47:10 IST" name="MultiBrowsertestng" finished-at="2024-12-06T21:47:33 IST" duration-ms="23297">
+  <suite started-at="2024-12-11T22:07:18 IST" name="Suite" finished-at="2024-12-11T22:07:39 IST" duration-ms="20694">
     <groups>
     </groups>
-    <test started-at="2024-12-06T21:47:10 IST" name="ChromeTest" finished-at="2024-12-06T21:47:21 IST" duration-ms="11579">
-      <class name="testscript.HomeTest">
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscript.HomeTest@25df00a0]" started-at="2024-12-06T21:47:10 IST" name="initializeBrowser" finished-at="2024-12-06T21:47:15 IST" duration-ms="5560" status="PASS">
+    <test started-at="2024-12-11T22:07:18 IST" name="Test" finished-at="2024-12-11T22:07:39 IST" duration-ms="20694">
+      <class name="testscript.AdminTest">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscript.AdminTest@4d15107f]" started-at="2024-12-11T22:07:18 IST" name="initializeBrowser" finished-at="2024-12-11T22:07:26 IST" duration-ms="7908" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,73 +18,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyUserIsAbleToLogout()[pri:0, instance:testscript.HomeTest@25df00a0]" started-at="2024-12-06T21:47:15 IST" name="verifyUserIsAbleToLogout" finished-at="2024-12-06T21:47:21 IST" duration-ms="5941" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUserIsAbleToLogout -->
-        <test-method is-config="true" signature="driverQuitAndClose()[pri:0, instance:testscript.HomeTest@25df00a0]" started-at="2024-12-06T21:47:21 IST" name="driverQuitAndClose" finished-at="2024-12-06T21:47:21 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuitAndClose -->
-      </class> <!-- testscript.HomeTest -->
-    </test> <!-- ChromeTest -->
-    <test started-at="2024-12-06T21:47:10 IST" name="EdgeTest" finished-at="2024-12-06T21:47:32 IST" duration-ms="22046">
-      <class name="testscript.HomeTest">
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscript.HomeTest@2f67a4d3]" started-at="2024-12-06T21:47:10 IST" name="initializeBrowser" finished-at="2024-12-06T21:47:18 IST" duration-ms="7888" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Edge]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyUserIsAbleToLogout()[pri:0, instance:testscript.HomeTest@2f67a4d3]" started-at="2024-12-06T21:47:18 IST" name="verifyUserIsAbleToLogout" finished-at="2024-12-06T21:47:32 IST" duration-ms="14097" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUserIsAbleToLogout -->
-        <test-method is-config="true" signature="driverQuitAndClose()[pri:0, instance:testscript.HomeTest@2f67a4d3]" started-at="2024-12-06T21:47:32 IST" name="driverQuitAndClose" finished-at="2024-12-06T21:47:32 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuitAndClose -->
-      </class> <!-- testscript.HomeTest -->
-    </test> <!-- EdgeTest -->
-    <test started-at="2024-12-06T21:47:10 IST" name="FirefoxTest" finished-at="2024-12-06T21:47:33 IST" duration-ms="23297">
-      <class name="testscript.HomeTest">
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testscript.HomeTest@2fb0623e]" started-at="2024-12-06T21:47:10 IST" name="initializeBrowser" finished-at="2024-12-06T21:47:26 IST" duration-ms="16560" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyUserIsAbleToLogout()[pri:0, instance:testscript.HomeTest@2fb0623e]" started-at="2024-12-06T21:47:26 IST" name="verifyUserIsAbleToLogout" finished-at="2024-12-06T21:47:33 IST" duration-ms="6662" status="FAIL">
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
+        <test-method signature="verifyTheUserIsAbleToUpdate()[pri:0, instance:testscript.AdminTest@4d15107f]" started-at="2024-12-11T22:07:26 IST" name="verifyTheUserIsAbleToUpdate" finished-at="2024-12-11T22:07:38 IST" duration-ms="12183" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Element <i class="ace-icon fa fa-power-off"> could not be scrolled into view
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[@href='https://groceryapp.uniqassosiates.com/admin/user/edit?edit=10985&page_ad=1']"}
+  (Session info: chrome=121.0.6167.189)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.24.0', revision: '748ffc9bc3'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [f74d3206-ebb7-4cab-a968-c5b918710ca9, clickElement {id=ec4f79cf-d87b-4057-af97-ead79332998a}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0, moz:accessibilityChecks: false, moz:buildID: 20241121140525, moz:debuggerAddress: 127.0.0.1:8070, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 2216, moz:profile: C:\Users\Smart\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:8070/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Element: [[FirefoxDriver: firefox on windows (f74d3206-ebb7-4cab-a968-c5b918710ca9)] -> xpath: //i[@class='ace-icon fa fa-power-off']]
-Session ID: f74d3206-ebb7-4cab-a968-c5b918710ca9]]>
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f4bf88ad9e3096aec7f129f2a5f8590b, findElement {using=xpath, value=//a[@href='https://groceryapp.uniqassosiates.com/admin/user/edit?edit=10985&page_ad=1']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.189, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\Smart\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59851}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59851/devtoo..., se:cdpVersion: 121.0.6167.189, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f4bf88ad9e3096aec7f129f2a5f8590b]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: Element <i class="ace-icon fa fa-power-off"> could not be scrolled into view
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@href='https://groceryapp.uniqassosiates.com/admin/user/edit?edit=10985&page_ad=1']"}
+  (Session info: chrome=121.0.6167.189)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.24.0', revision: '748ffc9bc3'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [f74d3206-ebb7-4cab-a968-c5b918710ca9, clickElement {id=ec4f79cf-d87b-4057-af97-ead79332998a}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0, moz:accessibilityChecks: false, moz:buildID: 20241121140525, moz:debuggerAddress: 127.0.0.1:8070, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 2216, moz:profile: C:\Users\Smart\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:8070/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Element: [[FirefoxDriver: firefox on windows (f74d3206-ebb7-4cab-a968-c5b918710ca9)] -> xpath: //i[@class='ace-icon fa fa-power-off']]
-Session ID: f74d3206-ebb7-4cab-a968-c5b918710ca9
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f4bf88ad9e3096aec7f129f2a5f8590b, findElement {using=xpath, value=//a[@href='https://groceryapp.uniqassosiates.com/admin/user/edit?edit=10985&page_ad=1']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.189, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\Smart\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59851}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59851/devtoo..., se:cdpVersion: 121.0.6167.189, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f4bf88ad9e3096aec7f129f2a5f8590b
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -97,16 +53,15 @@ at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.ja
 at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
-at pages.HomePage.clickOnLogout(HomePage.java:41)
-at testscript.HomeTest.verifyUserIsAbleToLogout(HomeTest.java:25)
+at pages.AdminPage.clickOnEdit(AdminPage.java:33)
+at testscript.AdminTest.verifyTheUserIsAbleToUpdate(AdminTest.java:29)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -123,23 +78,36 @@ at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 at org.testng.TestRunner.privateRun(TestRunner.java:848)
 at org.testng.TestRunner.run(TestRunner.java:621)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserIsAbleToLogout -->
-        <test-method is-config="true" signature="driverQuitAndClose()[pri:0, instance:testscript.HomeTest@2fb0623e]" started-at="2024-12-06T21:47:33 IST" name="driverQuitAndClose" finished-at="2024-12-06T21:47:33 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- verifyTheUserIsAbleToUpdate -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.AdminTest@4d15107f]" started-at="2024-12-11T22:07:38 IST" name="browserQuit" finished-at="2024-12-11T22:07:39 IST" duration-ms="529" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyTheUserIsAbleToUpdate status=FAILURE method=AdminTest.verifyTheUserIsAbleToUpdate()[pri:0, instance:testscript.AdminTest@4d15107f] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- driverQuitAndClose -->
-      </class> <!-- testscript.HomeTest -->
-    </test> <!-- FirefoxTest -->
-  </suite> <!-- MultiBrowsertestng -->
+        </test-method> <!-- browserQuit -->
+      </class> <!-- testscript.AdminTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

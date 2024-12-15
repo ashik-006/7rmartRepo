@@ -6,20 +6,19 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pages.AdminManageProductsPage;
+import pages.HomePage;
 import pages.LoginPage;
+
 import utilities.Exel_utilities;
 
 public class AdminManageProductsTest extends Base {
+	HomePage homepage;
+	AdminManageProductsPage adminManageproductspage;
 	@Test
 	public void verifyUserIsAbleToCreateNewProduct() throws IOException
 	{
 		String usernamevalue = Exel_utilities.getStringData(1, 0, "Loginpage");
 		String passwordvalue = Exel_utilities.getStringData(1, 1, "Loginpage");
-		LoginPage loginpage = new LoginPage(driver);
-		loginpage.enterUserNameOnUserField(usernamevalue);
-		loginpage.enterPasswordOnPasswordField(passwordvalue);
-		loginpage.clickOnSignInButton();
-
 		String title = Exel_utilities.getStringData(0, 1, "Productpage");
 		String tag = Exel_utilities.getStringData(1, 1, "Productpage");
 		String maxquantity =Exel_utilities.getIntegerData(3, 1, "Productpage");
@@ -28,31 +27,17 @@ public class AdminManageProductsTest extends Base {
 		String stock=Exel_utilities.getIntegerData(6, 1, "Productpage");
 		String purchase=Exel_utilities.getIntegerData(7, 1, "Productpage");
 		String decription = Exel_utilities.getStringData(8, 1, "Productpage");
-
-		AdminManageProductsPage adminManageproductspage = new AdminManageProductsPage(driver);
-		adminManageproductspage.clickOnProduct();
-		adminManageproductspage.clickOnNewProduct();
-		adminManageproductspage.enterTitle(title);
-		adminManageproductspage.enterProductType();
-		adminManageproductspage.enterTag(tag);
+		
+		LoginPage loginpage = new LoginPage(driver);
+		loginpage.enterUserNameOnUserField(usernamevalue).enterPasswordOnPasswordField(passwordvalue);
+		homepage = loginpage.clickOnSignInButton();
+		adminManageproductspage = homepage.clickOnProduct();
+		adminManageproductspage.clickOnNewProduct().enterTitle(title).enterProductType().enterTag(tag).clickOnPriceType().selectMinPiece().enterMaxQ(maxquantity).enterPrice(price).enterMrp(mrp).enterStock(stock).enterPurchasePrice(purchase).enterDescription(decription).uploadMainImage().uploadSubImage().clickOnFeatured().clickOnCombo().clickOnSave();
 		//adminManageproductspage.selectCategory();
 		//adminManageproductspage.selectSubCategory();
 		//adminManageproductspage.selectGroup();
-		adminManageproductspage.clickOnPriceType();
-		adminManageproductspage.selectMinPiece();
-		adminManageproductspage.enterMaxQ(maxquantity);
-		adminManageproductspage.enterPrice(price);
-		adminManageproductspage.enterMrp(mrp);
-		adminManageproductspage.enterStock(stock);
-		adminManageproductspage.enterPurchasePrice(purchase);
 		//adminManageproductspage.clickOnCheckbox();
-		adminManageproductspage.enterDescription(decription);
 		//adminManageproductspage.clickOnStockRadio();
-		adminManageproductspage.uploadMainImage();
-		adminManageproductspage.uploadSubImage();
-		adminManageproductspage.clickOnFeatured();
-		adminManageproductspage.clickOnCombo();
-		adminManageproductspage.clickOnSave();
 		boolean alertdisplayed = adminManageproductspage.alertIsDisplayed();
 		Assert.assertTrue(alertdisplayed, "ALERT IS NOT DISPLAYED");
 

@@ -51,42 +51,31 @@ WebDriver driver;
 	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']")private WebElement alert;
 	
 	
-	public void enterUserNameOnUserField(String usernamevaluepassing)
-	{
-		usernameField.sendKeys(usernamevaluepassing);
-	}
-	public void enterPasswordOnPasswordField(String pwdpassing)
-	{
-		pwd.sendKeys(pwdpassing);
-	}
-	public void clickOnSignInButton()
-	{
-		signin.click();
-	}
-	public void clickOnProduct()
-	{
-		product.click();
-	}
-	public void clickOnNewProduct() 
+	public AdminManageProductsPage clickOnNewProduct() 
 	{
 		newproduct.click();
+		return this;
 	}
-	public void enterTitle(String titlepassing)
+	public AdminManageProductsPage enterTitle(String titlepassing)
 	{
 		title.sendKeys(titlepassing);
+		return this;
+		
 	}
-	public void enterProductType()
+	public AdminManageProductsPage enterProductType()
 	{
 		//producttyperadio.click();
 		//WaitUtilities object= new WaitUtilities();
 		//object.waitForElement(driver, producttyperadio);
 		PageUtility obj=new PageUtility();
 		obj.javaSriptClick(driver, producttyperadio);
+		return this;
 
 	}
-	public void enterTag(String tagpassing)
+	public AdminManageProductsPage enterTag(String tagpassing)
 	{
 		tag.sendKeys(tagpassing);
+		return this;
 	}
 	public void selectCategory()
 	{
@@ -96,88 +85,104 @@ WebDriver driver;
 	{
 		
 	}
-	public void selectGroup()
+	public AdminManageProductsPage selectGroup()
 	{
 		//Select groupname = new Select(group);
 		//groupname.selectByVisibleText("discount");
 		PageUtility pageutility = new PageUtility();
 		pageutility.selectByVisibleText(group, "discount");
+		return this;
 	}
-	public void clickOnPriceType()
+	public AdminManageProductsPage clickOnPriceType()
 	{
 		pricetype.click();
+		return this;
 	}
-	public void selectMinPiece()
+	public AdminManageProductsPage selectMinPiece()
 	{
 		PageUtility pageutility = new PageUtility();
 		pageutility.selectByIndex(minpiece, 3);
 		PageUtility obj=new PageUtility();
 		obj.javaSriptClick(driver, minpiece);
+		return this;
 	}
 	
-	public void enterMaxQ(String maxpasing)
+	public AdminManageProductsPage enterMaxQ(String maxpasing)
 	{
 		maxq.sendKeys(maxpasing);
+		return this;
 	}
-	public void enterPrice(String pricepassing)
+	public AdminManageProductsPage enterPrice(String pricepassing)
 	{
 		price.sendKeys(pricepassing);
+		return this;
 	}
-	public void enterMrp(String mrppassing)
+	public AdminManageProductsPage enterMrp(String mrppassing)
 	{
 		mrp.sendKeys(mrppassing);
+		return this;
 	}
-	public void enterStock(String stockpassing)
+	public AdminManageProductsPage enterStock(String stockpassing)
 	{
 		stock.sendKeys(stockpassing);
+		return this;
 	}
-	public void enterPurchasePrice(String prchasepricepassing)
+	public AdminManageProductsPage enterPurchasePrice(String prchasepricepassing)
 	{
 		purchaseprice.sendKeys(prchasepricepassing);
+		return this;
 	}
-	public void clickOnCheckbox()
+	public AdminManageProductsPage clickOnCheckbox()
 	{
 		//checkbox.click();
 		PageUtility pageutility = new PageUtility();
 		pageutility.doubleClick(checkbox, driver);
+		return this;
 	}
-	public void enterDescription(String descriptionpassing)
+	public AdminManageProductsPage enterDescription(String descriptionpassing)
 	{
 		description.sendKeys(descriptionpassing);
+		return this;
 	}
-	public void clickOnStockRadio()
+	public AdminManageProductsPage clickOnStockRadio()
 	{
 		//stockradio.click();
 		PageUtility obj=new PageUtility();
 		obj.javaSriptClick(driver, stockradio);
+		return this;
 	}
-	public void uploadMainImage()
+	public AdminManageProductsPage uploadMainImage()
 	{
 		FileUploadUtilities fileuploadutilities = new FileUploadUtilities();
 		fileuploadutilities.fileuploadUsingSendkeys(mainimage,Constants.Meat1);
+	return this;
 	}
-	public void uploadSubImage()
+	public AdminManageProductsPage uploadSubImage()
 	{
 		FileUploadUtilities fileuploadutilities = new FileUploadUtilities();
 		fileuploadutilities.fileuploadUsingSendkeys(subimage, Constants.Meat2);
+	return this;
 	}
-	public void clickOnFeatured()
+	public AdminManageProductsPage clickOnFeatured()
 	{
 		//featured.click();
 		PageUtility obj=new PageUtility();
 		obj.javaSriptClick(driver, featured);
+		return this;
 	}
-	public void clickOnCombo()
+	public AdminManageProductsPage clickOnCombo()
 	{
 		//combo.click();
 		PageUtility obj=new PageUtility();
 		obj.javaSriptClick(driver, combo);
+		return this;
 	}
-	public void clickOnSave()
+	public AdminManageProductsPage clickOnSave()
 	{
 		//save.click();
 		PageUtility obj=new PageUtility();
 		obj.javaSriptClick(driver, save);
+		return this;
 	}
 	public boolean alertIsDisplayed()
 	{
